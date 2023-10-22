@@ -1,0 +1,28 @@
+/** Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/** footer template */
+footer {
+	align-items: center;
+	background-color: #333;
+	color: #fdfdfd;
+	display: flex;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	height: 5rem;
+	justify-content: center;
+}
+footer a {
+	color: #aad;
+	text-decoration: none;
+}
+/* body */
+body {
+	font-family: "Press Start 2P", sans-serif;
+	min-height: 100vh;
+}
+/* header */
+/* main */
