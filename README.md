@@ -32,3 +32,7 @@ Simulador de piano em Javascript.
 > Extras:
 > - Responsividade *//ToDo*
 > - Buscar API com outros samples de piano em .wav *//ToDo*
+
+## ✋ 4. [Yu-Gi-Oh!]()
+
+Um jogo do Yu-Gi-Oh utilizando as mecânicas de jogo do Jo-Ken-Po, explorando conceitos avançados de organização de states com Javascript puro, estruturação de arquivos e criação de funções reaproveitáveis
