@@ -1,0 +1,152 @@
+/** Reset */
+* {
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: n;
+}
+/** template */
+footer {
+	align-items: center;
+	border-top: 5px solid #ffd700;
+	display: flex;
+	font-size: 16px;
+	justify-content: center;
+	min-height: 6rem;
+}
+footer a {
+	color: #aad;
+	text-decoration: none;
+}
+body {
+	min-height: 100vh;
+}
+header {
+	align-items: center;
+	border-bottom: 5px solid #ffd700;
+	display: flex;
+	justify-content: center;
+	min-height: 6rem;
+}
+header,
+footer {
+	background-color: #333;
+	color: #fdfdfd;
+}
+/** main */
+main {
+	min-height: calc(100vh - 12rem);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: radial-gradient(circle at center center, #2f3509, #0c0e01),
+		repeating-radial-gradient(
+			circle at center center,
+			#444c0e,
+			#444c0e,
+			10px,
+			transparent 20px,
+			transparent 10px
+		);
+}
+
+#piano {
+	background-color: #222;
+	border: 5px solid #ffd700;
+	border-radius: 2rem;
+	padding: 2rem;
+	width: 780px;
+	color: #fdfdfd;
+}
+
+/** controls */
+
+#controls {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.control {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	align-items: center;
+	width: 50%;
+}
+.control span {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+input[type="range"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #ddd;
+	border-radius: 1rem;
+	height: 8px;
+	outline: none;
+	width: 100%;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #ffd700;
+	border-radius: 1rem;
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #fdfdfd;
+}
+
+/* keys */
+#piano-keys {
+	display: flex;
+}
+
+.key {
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+	color: #626262;
+	text-transform: uppercase;
+}
+
+.key.white {
+	width: 4.5rem;
+	height: 14rem;
+	border: 2px solid #555;
+	background: linear-gradient(#fdfdfd, #eee);
+	border-radius: 0.5rem;
+	transition: 0.2s;
+}
+.key.white.active {
+	box-shadow: inset 0px 0px 1rem #00000077;
+}
+
+.key.black {
+	width: 3rem;
+	height: 7rem;
+	border: 2px solid #555;
+	background: linear-gradient(#222, #0a0a0a);
+	border-radius: 0 0 0.5rem 0.5rem;
+	z-index: 2;
+	margin: 0 -1.5rem 0 -1.5rem;
+}
+.key.black.active {
+	box-shadow: inset 0px 0px 1rem #fdfdfd33;
+}
+.key span {
+	position: absolute;
+	bottom: 1rem;
+	width: 100%;
+	text-align: center;
+}
+
+.hidden span {
+	display: none;
+}
