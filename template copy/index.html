@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Settings -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yu_Gi-Oh!</title>
+
+		<!-- Font: Press start 2P -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="src/styles/styles.css" />
+		<link rel="stylesheet" href="src/styles/buttons.css" />
+		<link rel="stylesheet" href="src/styles/containers_and_frames.css" />
+		<!-- FavIcon -->
+		<link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon" />
+		<!-- Engine -->
+		<script type="module" src="src/js/cardsData.js" defer></script>
+		<script type="module" src="src/js/main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h2>Yu_Gi-Oh! (Jo-Ken-Po!)</h2>
+		</header>
+		<main>
+			<div class="container__left framed-golden-2">
+				<div class="score-box frame">
+					<p class="score">
+						Win: <span id="win">0</span> | Lose:
+						<span id="lose">0</span>
+					</p>
+				</div>
+				<div class="menu__avatar">
+					<img id="card-image" src="./src/assets/icons/card-back.png" />
+				</div>
+				<div class="card-details frame">
+					<p id="card-name">Card name</p>
+					<p id="card-type">Type</p>
+				</div>
+			</div>
+			<div class="container__right">
+				<div class="bg-video">
+					<video class="video" autoplay loop muted>
+						<source src="src/assets/video/yugi.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="game-container">
+					<div id="battle-container">
+						<div class="card-box framed" id="ai-cards"></div>
+						<div class="versus-box">
+							<div class="versus-top">
+								<div class="card-infield framed-golden">
+									<img id="player-field-card" />
+								</div>
+								<img
+									src="./src/assets/icons/millenium2.png"
+									alt="player-icon"
+									class="p-icon" />
+								<div class="card-infield framed-golden">
+									<img id="ai-field-card" />
+								</div>
+							</div>
+							<div class="versus-bottom">
+								<button id="next-duel" class="rpgui-button hidden">
+									GANHOU
+								</button>
+							</div>
+						</div>
+						<div class="card-box framed" id="player-cards"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p>
+				Desenvolvido por
+				<a href="https://github.com/matheuscoutol" target="_blank">Matheus Couto</a>
+				- como projeto do Bootcamp Potência iFood - Desenvolvimento de Jogos da
+				<a href="https://dio.me" target="_blank">DIO</a> - 2023
+			</p>
+		</footer>
+	</body>
+</html>

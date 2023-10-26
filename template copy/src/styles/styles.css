@@ -1,0 +1,169 @@
+/** Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/** template */
+footer {
+	align-items: center;
+	border-top: 5px solid #ffd700;
+	display: flex;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	justify-content: center;
+	min-height: 6rem;
+}
+footer a {
+	color: #aad;
+	text-decoration: none;
+}
+body {
+	font-family: "Press Start 2P", sans-serif;
+	min-height: 100vh;
+	cursor: url(../assets/cursor/yugicursor.png), default;
+}
+img:hover,
+button:hover,
+a:hover {
+	cursor: url(../assets/cursor/yamiyugicursorGLOW.png), default;
+}
+button {
+	font-family: "Press Start 2P", sans-serif;
+}
+header {
+	align-items: center;
+	border-bottom: 5px solid #ffd700;
+	display: flex;
+	justify-content: center;
+	min-height: 6rem;
+}
+header,
+footer {
+	background-color: #333;
+	color: #fdfdfd;
+}
+main {
+	min-height: calc(100vh - 12rem);
+	overflow: hidden;
+	position: relative;
+}
+/* bg video */
+.bg-video {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: -2;
+}
+.bg-video::after {
+	background: rgb(180, 155, 58);
+	content: "";
+	height: 100%;
+	opacity: 0.92;
+	overflow: hidden;
+	position: absolute;
+	width: calc(100% - 35rem);
+
+	background: radial-gradient(
+		circle,
+		rgb(48, 41, 16) 0%,
+		rgb(37, 4, 4) 50%,
+		rgb(53, 37, 15) 100%
+	);
+}
+/** main */
+main {
+	display: flex;
+}
+.container__left {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 100%;
+	min-width: 35rem;
+}
+.score-box,
+.card-details {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 6rem;
+	justify-content: space-around;
+	width: 24rem;
+}
+.frame {
+	background-color: #fdfdfd;
+	border: 2px solid #111;
+	border-radius: 0.5rem;
+}
+#card-name {
+	font-size: 0.8rem;
+}
+.game-container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 100%;
+	min-width: calc(100vw - 35rem);
+}
+#battle-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: space-around;
+	padding: 2rem;
+}
+.card-box {
+	background-color: #333;
+	display: flex;
+	gap: 2rem;
+	height: 10rem;
+	justify-content: space-around;
+	width: 40rem;
+}
+.versus-box {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.versus-top {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.versus-bottom {
+	display: flex;
+	justify-content: center;
+}
+.card-infield {
+	align-items: center;
+	border: 1px solid #fdfdfd;
+	display: flex;
+	height: 12rem;
+	justify-content: center;
+	width: 10rem;
+}
+.p-icon {
+	height: 5rem;
+}
+.card {
+	height: 100%;
+	position: relative;
+	transition: transform 0.3s;
+}
+#player-cards .card:hover {
+	transform: scale(1.2);
+}
+#card-image {
+	height: 200px;
+}
+#player-field-card,
+#ai-field-card {
+	height: 130%;
+}
+.hidden {
+	visibility: hidden;
+}
